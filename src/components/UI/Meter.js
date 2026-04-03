@@ -14,12 +14,12 @@ export default function Meter() {
     const prevTemperatureRef = useRef("000");
     const animationKeyRef = useRef(0);
 
-    const calculateTasks = (progress) => {
-        return Math.round(100 + progress * 900);
+    const calculateActions = (progress) => {
+        return Math.round(10 + progress * 90);
     };
 
-    const calculateUsdc = (progress) => {
-        return Math.round(1000 + progress * 14000);
+    const calculateConfidence = (progress) => {
+        return Math.round(60 + progress * 39);
     };
 
     useGSAP(() => {
@@ -34,8 +34,8 @@ export default function Meter() {
                     const progress = self.progress;
                     
                     // Calculate values based on progress
-                    const currentPressure = calculateTasks(progress);
-                    const currentTemperature = calculateUsdc(progress);
+                    const currentPressure = calculateActions(progress);
+                    const currentTemperature = calculateConfidence(progress);
                     
                         const pressureStr = String(currentPressure).padStart(3, '0');
                     const temperatureStr = String(currentTemperature).padStart(4, '0');
@@ -81,7 +81,7 @@ export default function Meter() {
     return (
         <div className={`${styles.meter}`}>
             <div className={styles.meterBar}>
-                (+) {renderDigits(pressure, prevPressureRef.current, 'tasks')} TASKS — ${renderDigits(temperature, prevTemperatureRef.current, 'usdc')} USDC
+                (+) {renderDigits(pressure, prevPressureRef.current, 'actions')} ACTIONS — {renderDigits(temperature, prevTemperatureRef.current, 'confidence')}% CONFIDENCE
             </div>
         </div>
     )

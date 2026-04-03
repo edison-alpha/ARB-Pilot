@@ -34,7 +34,7 @@ export const metadata = {
       "An Arbitrum-native system that makes AI-assisted onchain execution clearer, safer, and deterministic before users sign.",
     images: [
       {
-        url: "/images/AgentHandsLogo.png",
+        url: "/images/p1.png",
         width: 1200,
         height: 630,
         alt: "ArbiPilot — Clarity for Agentic Execution",
@@ -47,7 +47,7 @@ export const metadata = {
     title: "ArbiPilot — Explain First. Execute Second.",
     description:
       "An Arbitrum-native system that makes AI-assisted onchain execution clearer, safer, and deterministic before users sign.",
-    images: ["/images/AgentHandsLogo.png"],
+    images: ["/images/p1.png"],
   },
   robots: {
     index: true,

@@ -2,144 +2,143 @@
   "projects": [
     {
       "id": 1,
-      "slug": "usdc-escrow",
-      "title": "USDC PAYMENT SYSTEM",
-      "innerTitle": "USDC PAYMENTS",
-      "date": "MARCH 2026",
-      "client": "AGENTHANDS | CORE",
-      "type": "SMART CONTRACT",
+      "slug": "intent-parsing-layer",
+      "title": "INTENT PARSING LAYER",
+      "innerTitle": "INTENT PARSING",
+      "date": "APRIL 2026",
+      "client": "ARBIPILOT | CORE",
+      "type": "AI INTERPRETATION",
       "imageUrl": "/images/p1.png",
       "imagesProject": [],
-      "mainContent": ["When an AI agent posts a task, USDC goes from the agent's wallet into the smart contract. The funds stay locked until the task is done — no one can touch them in between.",
-            "Once a worker submits proof and the agent approves, payment goes directly to the worker minus a 2.5% fee. If there's a dispute, the contract owner arbitrates. If a task gets cancelled before anyone accepts it, the agent gets a full refund."],
+      "mainContent": [
+        "ArbiPilot begins with natural language intent. A user can describe what they want in plain terms, and the system transforms that into structured, reviewable execution intent instead of jumping directly to opaque transaction creation.",
+        "This matters because blockchain actions demand precision. The parsing layer exists to reduce ambiguity without pretending that flexible human language should directly control money-moving execution."
+      ],
       "details": {
-        "chain": "Base Sepolia ; Celo Sepolia",
-        "token": "USDC (6 decimals)",
-        "contract": "UUPS Upgradeable Proxy",
-        "stack": "Solidity ; OpenZeppelin ; Foundry",
-        "status": "DEPLOYED ;",
-        "link": "sepolia.basescan.org/address/0xADA0466303441102cb16F8eC1594C744d603f746"
+        "scope": "Natural language → structured action",
+        "goal": "Reduce ambiguity before execution",
+        "stack": "Next.js ; AI parsing ; schema validation",
+        "status": "ACTIVE ;",
+        "link": "arbipilot.vercel.app"
       },
-      "nextProject": "self-protocol-verification",
-      "colors" : ["#E9DB97","#F5F1E9","#9095AD"]
+      "nextProject": "validation-and-guardrails",
+      "colors": ["#B7E7F3", "#F5F5F5", "#4C5568"]
     },
     {
       "id": 2,
-      "slug": "self-protocol-verification",
-      "title": "SELF PROTOCOL VERIFICATION",
-      "innerTitle": "SELF PROTOCOL",
-      "date": "MARCH 2026",
-      "client": "AGENTHANDS | IDENTITY",
-      "type": "IDENTITY CHECK",
+      "slug": "validation-and-guardrails",
+      "title": "VALIDATION & GUARDRAILS",
+      "innerTitle": "VALIDATION",
+      "date": "APRIL 2026",
+      "client": "ARBIPILOT | SAFETY",
+      "type": "CONTROL LAYER",
       "imageUrl": "/images/p2.png",
       "imagesProject": [],
-      "mainContent": ["Only verified humans can accept tasks. Workers scan a QR code through Self Protocol to prove they're a real person — no personal data gets stored anywhere.",
-            "The check confirms age (18+) and OFAC compliance without revealing any private information. It's a one-time thing: once verified, workers can accept any task on the platform.",
-          "This way agents know they're hiring actual people, and workers keep full control of their identity."],
+      "mainContent": [
+        "ArbiPilot does not let the model freely decide what contracts to touch. Supported actions move through validation rules, allowlists, schema checks, and execution boundaries before they become eligible for signing.",
+        "The point is not to make AI more powerful. The point is to make AI-assisted onchain execution safer, narrower, and easier to reason about."
+      ],
       "details": {
-        "protocol": "Self Protocol",
-        "type": "Zero-Knowledge Proofs",
-        "requirements": "Age 18+ ; OFAC Check",
-        "stack": "Self Agent SDK ; Self QR Code",
-        "status": "INTEGRATED ;",
-        "link": "self.xyz"
+        "pattern": "Allowlisted execution",
+        "checks": "Schema ; route ; slippage ; supported flows",
+        "stack": "Validation engine ; deterministic adapters",
+        "status": "ACTIVE ;"
       },
-      "nextProject": "erc8004-agent-identity",
-      "colors": ["#8B0000", "#505050", "#F1E4D2"]
+      "nextProject": "risk-preview-system",
+      "colors": ["#6C7EA0", "#E8EEF7", "#9FB8D9"]
     },
     {
       "id": 3,
-      "slug": "erc8004-agent-identity",
-      "title": "ERC-8004 AGENT IDENTITY",
-      "innerTitle": "ERC-8004 IDENTITY",
-      "date": "MARCH 2026",
-      "client": "AGENTHANDS | TRUST",
-      "type": "AGENT REGISTRY",
+      "slug": "risk-preview-system",
+      "title": "RISK PREVIEW SYSTEM",
+      "innerTitle": "RISK PREVIEW",
+      "date": "APRIL 2026",
+      "client": "ARBIPILOT | CLARITY",
+      "type": "EXPLAINABILITY",
       "imageUrl": "/images/p3.png",
       "imagesProject": [],
-      "mainContent": ["ERC-8004 gives AI agents an on-chain identity on Celo Sepolia. Each agent registers in the IdentityRegistry and gets an NFT token with metadata — basically a profile that lives on-chain.",
-            "The ReputationRegistry tracks how agents interact with workers: reviews, ratings, completed tasks. Workers can check an agent's history before accepting a task.",
-          "Agents can't post tasks anonymously. Their identity and track record follow them, which pushes them to write fair descriptions and pay on time."],
+      "mainContent": [
+        "Before users sign, ArbiPilot explains what the action will do, what assets are involved, and which constraints are applied. The goal is to replace blind confidence with visible execution context.",
+        "This is one of the core differences between ArbiPilot and typical AI wallet flows: users are shown an intelligible action path before the wallet prompt becomes the point of no return."
+      ],
       "details": {
-        "registry": "IdentityRegistry (Celo Sepolia)",
-        "reputation": "ReputationRegistry",
-        "standard": "ERC-8004 Agent Trust Protocol",
-        "stack": "Solidity ; Viem ; Wagmi",
-        "status": "DEPLOYED ;"
+        "focus": "Clarity before signature",
+        "outputs": "Execution summary ; route context ; risk surface",
+        "stack": "Client-side explainability layer",
+        "status": "ACTIVE ;"
       },
-      "nextProject": "x402-micropayments",
-      "colors": ["#BCD9F0", "#D4AF37", "#F5F0E8"]
+      "nextProject": "deterministic-swap-execution",
+      "colors": ["#D8E5FF", "#B6C5E8", "#F8F8FA"]
     },
     {
       "id": 4,
-      "slug": "x402-micropayments",
-      "title": "x402 MICROPAYMENTS",
-      "innerTitle": "x402 PROTOCOL",
-      "date": "MARCH 2026",
-      "client": "AGENTHANDS | PAYMENTS",
-      "type": "API PAYMENT LAYER",
+      "slug": "deterministic-swap-execution",
+      "title": "DETERMINISTIC SWAP EXECUTION",
+      "innerTitle": "SWAP EXECUTION",
+      "date": "APRIL 2026",
+      "client": "ARBIPILOT | ARBITRUM",
+      "type": "ONCHAIN ACTION",
       "imageUrl": "/images/p4.png",
       "imagesProject": [],
-      "mainContent": ["AI agents pay small USDC fees to use the AgentHands API. The x402 middleware checks payment before processing any request — no payment, no action.",
-            "Creating a task costs $0.01 USDC. Approving, disputing, rating, and uploading proofs cost $0.001 each. Listing and viewing tasks is free.",
-          "The integration runs on Hono middleware with the x402 scheme on Base Sepolia. Agents include payment in their HTTP requests and the API handles verification through the x402.org facilitator."],
+      "mainContent": [
+        "ArbiPilot currently uses swap execution as its first constrained onchain action. That makes it a practical demonstration of the broader thesis: AI may help interpret intent, but execution should stay deterministic and reviewable.",
+        "By starting with a narrow action set, the system can provide more confidence, clearer boundaries, and a stronger foundation for future expansion."
+      ],
       "details": {
-        "protocol": "x402 (HTTP 402)",
-        "network": "eip155:84532 (Base Sepolia)",
-        "currency": "USDC",
-        "stack": "Hono ; @x402/core ; @x402/evm",
-        "status": "LIVE ;",
-        "link": "x402.org"
+        "chain": "Arbitrum Sepolia",
+        "protocol": "Camelot-compatible execution flow",
+        "pattern": "Constrained deterministic action",
+        "status": "ACTIVE ;",
+        "link": "arbipilot.vercel.app"
       },
-      "nextProject": "multi-chain-deployment",
-      "colors": ["#D1D3C5","#6C6E85", "#99B19C"]
+      "nextProject": "agent-identity-registry",
+      "colors": ["#D5D2F0", "#6C6E85", "#EDEBFA"]
     },
     {
       "id": 5,
-      "slug": "multi-chain-deployment",
-      "title": "MULTI-CHAIN DEPLOYMENT",
-      "innerTitle": "BASE & CELO",
-      "date": "MARCH 2026",
-      "client": "AGENTHANDS | INFRA",
-      "type": "MULTI-CHAIN ARCHITECTURE",
+      "slug": "agent-identity-registry",
+      "title": "AGENT IDENTITY REGISTRY",
+      "innerTitle": "IDENTITY",
+      "date": "APRIL 2026",
+      "client": "ARBIPILOT | TRUST",
+      "type": "ONCHAIN IDENTITY",
       "imageUrl": "/images/p5.png",
       "imagesProject": [],
-      "mainContent": ["AgentHands runs on two chains — Base Sepolia and Celo Sepolia — with the same contract address on both. Users pick whichever chain they prefer.",
-            "The frontend pulls tasks from both chains and shows them together. You can filter by network, and each task has a chain badge so you know where it lives.",
-          "The contract is deployed with a deterministic UUPS proxy, so the address is identical on both chains. Switching networks works through Reown AppKit, and USDC addresses are set per chain."],
+      "mainContent": [
+        "ArbiPilot is designed to register through the agent identity registry instead of acting like an invisible script with signing power. Identity matters when an agent influences wallet execution.",
+        "That makes the system more legible not only for users, but also for judges, developers, and future integrations that need to know who or what is initiating execution."
+      ],
       "details": {
-        "chains": "Base Sepolia (84532) ; Celo Sepolia (11142220)",
-        "contract": "0xADA046...f746 (same on both)",
-        "deployment": "UUPS Proxy ; Deterministic",
-        "stack": "Foundry ; Viem ; Wagmi ; Reown AppKit",
-        "status": "DEPLOYED ;"
+        "registry": "Arbitrum identity registry",
+        "mode": "Agent0-compatible registration path",
+        "purpose": "Traceability ; attribution ; trust",
+        "status": "READY ;"
       },
-      "nextProject": "ipfs-proof-storage",
-      "colors": ["#EEE5DF", "#F3AD8D", "#615A6B"]
+      "nextProject": "arbipilot-interface",
+      "colors": ["#EEE5DF", "#9BB8D3", "#616B7A"]
     },
     {
       "id": 6,
-      "slug": "ipfs-proof-storage",
-      "title": "IPFS PROOF STORAGE",
-      "innerTitle": "IPFS PROOFS",
-      "date": "MARCH 2026",
-      "client": "AGENTHANDS | VERIFICATION",
-      "type": "FILE STORAGE",
+      "slug": "arbipilot-interface",
+      "title": "ARBIPILOT INTERFACE",
+      "innerTitle": "PRODUCT SURFACE",
+      "date": "APRIL 2026",
+      "client": "ARBIPILOT | UX",
+      "type": "EXECUTION UX",
       "imageUrl": "/images/p6.png",
       "imagesProject": [],
-      "mainContent": ["When a worker finishes a task, they upload a photo as proof. The photo gets pinned to IPFS through Pinata, and the CID (content identifier) goes on-chain.",
-            "The flow: upload photo → get IPFS CID → submit CID to the smart contract. The agent views the proof via Pinata gateway, checks the work, and approves or disputes.",
-          "Storing photos on IPFS keeps gas costs low. The CID in the contract is a permanent reference — anyone can look it up through any IPFS gateway."],
+      "mainContent": [
+        "The interface is not just a pretty shell around a transaction button. It is the place where intent, validation, explanation, and execution are brought together into a clearer user flow.",
+        "ArbiPilot's product surface exists to make agentic finance feel less like blind signing and more like supervised execution."
+      ],
       "details": {
-        "storage": "IPFS (Pinata)",
-        "proof": "Photo upload ; CID on-chain",
-        "gateway": "gateway.pinata.cloud",
-        "stack": "Pinata API ; FormData ; IPFS",
-        "status": "LIVE ;",
-        "link": "pinata.cloud"
+        "ux": "Explain-first interaction",
+        "role": "Human review before signature",
+        "stack": "Next.js ; motion ; interface composition",
+        "status": "ACTIVE ;"
       },
-      "nextProject": "usdc-escrow",
-      "colors": ["#717397", "#A48DAD", "#FFFFFF"]
+      "nextProject": "intent-parsing-layer",
+      "colors": ["#717397", "#A8B5CC", "#FFFFFF"]
     }
   ]
 }

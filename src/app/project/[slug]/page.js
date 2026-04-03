@@ -530,7 +530,7 @@ export default function ProjectPage({ params }) {
       <div className={styles.projectContent}>
         <Navigation 
           variant="project" 
-          selectedItem="FEATURES"
+          selectedItem="FLOW"
           onItemClick={handleClick}
           customStyles={{ selected: styles.selected }}
         />
@@ -546,7 +546,7 @@ export default function ProjectPage({ params }) {
               ))}
               <div className={styles.buttonContainer}>
                 <button onClick={handleClickNextProject}>        
-                    <span>Next Feature</span>
+                    <span>Next Layer</span>
                 </button>
               </div>
             </div>
@@ -563,7 +563,7 @@ export default function ProjectPage({ params }) {
           <span className={styles.middleLine}></span>
         </div>        
         <div className={styles.imagesDetails}>
-          <p className={styles.imagesNumber}>Image N°{project.imagesProject.length}</p>
+          <p className={styles.imagesNumber}>Layer N°{project.id}</p>
           <div className={styles.projInfos}>
             <div className={styles.projCubes}>
             {project.imagesProject.map((image, index) => (

@@ -195,12 +195,12 @@ export default function Marker() {
   }, [isMobile]);
 
   return <>
-  <p className={styles.nameProject}  > AGENTHANDS</p>
+  <p className={styles.nameProject}  > ARBIPILOT</p>
   <div className={styles.anchorWork} id="work"></div>
 
   <div className={styles.projets}>
     <div className={styles.headStatic}>
-      <h2>FEATURES</h2>
+      <h2>EXECUTION FLOW</h2>
     </div>
     <div className={styles.infos} ref={infosRef}>
       <div className={styles.infosContent}>
