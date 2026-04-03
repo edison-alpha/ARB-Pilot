@@ -530,3 +530,48 @@
         }
     }
 }
+
+/* === ArbiPilot dark override for project pages === */
+.projectPage,
+.projectPage .projectContent,
+.projectPage .projectImages,
+.projectPage .mobileClock,
+.projectPage .projectContent nav,
+.projectPage .projectImages .head,
+.projectPage .projectImages .imagesNumber,
+.projectPage .projInfos,
+.projectPage .projDescription,
+.projectPage .projectDescription,
+.projectPage .projectInfo .date {
+    mix-blend-mode: normal !important;
+    color: #e5e7eb !important;
+}
+
+.projectPage {
+    color: #e5e7eb !important;
+}
+
+.projectPage .projectContent .middleLineContainer .middleLine,
+.projectPage .projectImages .middleLineContainer .middleLine {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.06) 100%) !important;
+}
+
+.projectPage .projectContent nav ul li a,
+.projectPage .projectDescription,
+.projectPage .projectInfo .date,
+.projectPage .projDescription p {
+    color: #cbd5e1 !important;
+}
+
+.projectPage .projectContent .projectDetails .projectInfo .projectDescription > .buttonContainer > button,
+.projectPage .projectImages .projDescription > .buttonContainerLink > a,
+.projectPage .projectContent .projectDetails .projectInfo .projectDescription > .buttonContainer::before,
+.projectPage .projectContent .projectDetails .projectInfo .projectDescription > .buttonContainer::after,
+.projectPage .projectImages .projDescription > .buttonContainerLink::before,
+.projectPage .projectImages .projDescription > .buttonContainerLink::after {
+    color: #f5f5f5 !important;
+}
+
+.projectPage .projectImages .projCubes .cube {
+    background-color: rgba(255,255,255,0.18) !important;
+}
