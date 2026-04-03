@@ -1354,3 +1354,364 @@
 .selfPowered a {
     color: #dbeafe !important;
 }
+
+/* === ArbiPilot rebuilt homepage === */
+.arbiPage {
+    position: relative;
+    min-height: 100svh;
+    color: #f5f5f5;
+    background: transparent;
+    pointer-events: all;
+}
+
+.arbiHero {
+    position: relative;
+    min-height: 100svh;
+    padding: 2rem 2rem 6rem;
+    overflow: hidden;
+}
+
+.heroGlowA,
+.heroGlowB {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(90px);
+    pointer-events: none;
+}
+
+.heroGlowA {
+    top: 8%;
+    left: 8%;
+    width: 18rem;
+    height: 18rem;
+    background: rgba(56, 189, 248, 0.14);
+}
+
+.heroGlowB {
+    right: 10%;
+    top: 18%;
+    width: 22rem;
+    height: 22rem;
+    background: rgba(99, 102, 241, 0.12);
+}
+
+.arbiNav,
+.heroContent,
+.pillarSection,
+.layerSection,
+.aboutSectionNew {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.arbiNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0.9rem 1.2rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(10,10,10,0.6);
+    backdrop-filter: blur(20px);
+    border-radius: 1.4rem;
+}
+
+.brandBlock {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.brandIcon {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+    color: #e0f2fe;
+}
+
+.brandName {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.34em;
+}
+
+.brandSub {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    margin-top: 0.15rem;
+}
+
+.heroLinks {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.heroLinks a {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.heroContent {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 3rem;
+    align-items: end;
+    padding-top: 7rem;
+}
+
+.eyebrow,
+.sectionEyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.04);
+    color: #dbeafe;
+    font-size: 0.72rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.heroTitle {
+    margin-top: 1.5rem;
+    font-family: var(--font-parasitype);
+    font-size: clamp(3.5rem, 7vw, 6.75rem);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
+    max-width: 11ch;
+}
+
+.heroDescription {
+    margin-top: 1.75rem;
+    max-width: 42rem;
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.heroActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.95rem 1.3rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: all 0.25s ease;
+}
+
+.primaryBtn {
+    background: #f5f5f5;
+    color: #050505;
+}
+
+.secondaryBtn {
+    background: rgba(255,255,255,0.04);
+    color: #f5f5f5;
+}
+
+.heroPanel {
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(10,10,10,0.72);
+    backdrop-filter: blur(18px);
+    border-radius: 2rem;
+    padding: 1.4rem;
+    box-shadow: 0 24px 60px -36px rgba(0,0,0,0.85);
+}
+
+.panelLabel {
+    font-size: 0.72rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    margin-bottom: 1rem;
+}
+
+.panelGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+}
+
+.infoCard {
+    padding: 1rem;
+    border-radius: 1.25rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.infoCard span {
+    display: block;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #9ca3af;
+}
+
+.infoCard strong {
+    display: block;
+    margin-top: 0.45rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.panelFooter {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    background: rgba(255,255,255,0.03);
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+.pillarSection,
+.layerSection,
+.aboutSectionNew {
+    padding: 5rem 0;
+}
+
+.sectionIntro {
+    max-width: 48rem;
+    margin-bottom: 2rem;
+}
+
+.sectionIntro h2,
+.aboutBlock h2 {
+    margin-top: 1rem;
+    font-family: var(--font-parasitype);
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.pillarGrid,
+.layerGrid {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.pillarGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.layerGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pillarCard,
+.layerCard,
+.aboutMeta > div {
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.04);
+    border-radius: 1.6rem;
+    padding: 1.35rem;
+}
+
+.pillarIcon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.05);
+    color: #dbeafe;
+}
+
+.pillarCard h3,
+.layerCard h3 {
+    margin-top: 1rem;
+    font-size: 1.15rem;
+}
+
+.pillarCard p,
+.layerCard p,
+.aboutBlock p,
+.aboutMeta strong {
+    margin-top: 0.85rem;
+    color: #cbd5e1;
+    line-height: 1.85;
+}
+
+.layerCard span,
+.aboutMeta span {
+    display: block;
+    color: #9ca3af;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+}
+
+.aboutSectionNew {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 1.25rem;
+    padding-bottom: 7rem;
+}
+
+.aboutMeta {
+    display: grid;
+    gap: 1rem;
+}
+
+.reveal {
+    will-change: transform, opacity, filter;
+}
+
+@media (max-width: 960px) {
+    .heroContent,
+    .pillarGrid,
+    .layerGrid,
+    .aboutSectionNew {
+        grid-template-columns: 1fr;
+    }
+
+    .heroLinks {
+        display: none;
+    }
+
+    .heroPanel {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .arbiHero {
+        padding: 1rem 1rem 4rem;
+    }
+
+    .arbiNav,
+    .heroContent,
+    .pillarSection,
+    .layerSection,
+    .aboutSectionNew {
+        width: calc(100% - 1rem);
+    }
+
+    .panelGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .heroTitle {
+        font-size: clamp(2.8rem, 14vw, 4.5rem);
+    }
+}
