@@ -1235,3 +1235,122 @@
     }
 }
 
+
+/* === ArbiPilot dark-mode override layer === */
+.container,
+.hero,
+.home,
+.about,
+.projets,
+.projectPage,
+.projectContent,
+.projectImages,
+.roleButtons,
+.roleBtn,
+.roleOverlay,
+.rolePanel,
+.nameProject {
+    mix-blend-mode: normal !important;
+    color: #e5e7eb !important;
+}
+
+.hero .middleLine,
+.home .middleLine,
+.about .lineContainer .middleLine,
+.loader .middleLine,
+.projectContent .middleLineContainer .middleLine,
+.projectImages .middleLineContainer .middleLine {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.06) 100%) !important;
+}
+
+.loader {
+    background: #05070a !important;
+}
+
+.loader .loaderContent,
+.loader .loaderContent::before,
+.loader .loaderContent::after,
+.loader .loaderText,
+.closeBtn,
+.rolePanelHeader h3,
+.curlCode,
+.step strong,
+.appBtn,
+.nameProject,
+.home nav h3,
+.about nav h3 {
+    color: #f5f5f5 !important;
+}
+
+.home nav h3,
+.about nav h3,
+.nameProject,
+.projets > p {
+    background: rgba(255,255,255,0.08) !important;
+}
+
+.roleBtn,
+.home nav ul li a,
+.about nav ul li a,
+.projectContent nav ul li a,
+.projDescription p,
+.projectDescription,
+.projectInfo .date,
+.rolePanelDesc,
+.step p,
+.selfPowered,
+.curlCopyBtn {
+    color: #a1a1aa !important;
+}
+
+.roleBtn:hover,
+.home nav ul li:hover,
+.about nav ul li:hover,
+.projectContent nav ul li:hover,
+.curlCopyBtn:hover,
+.appBtn:hover {
+    color: #ffffff !important;
+}
+
+.roleOverlay {
+    background: rgba(5, 7, 10, 0.74) !important;
+}
+
+.rolePanel,
+.curlRow,
+.appBtn {
+    border-color: rgba(255,255,255,0.12) !important;
+}
+
+.rolePanel {
+    background: rgba(10, 10, 10, 0.96) !important;
+}
+
+.curlRow {
+    background: rgba(255,255,255,0.05) !important;
+}
+
+.curlCopyBtn,
+.appBtn {
+    background: rgba(255,255,255,0.06) !important;
+}
+
+.curlCopyBtn:hover,
+.appBtn:hover {
+    background: rgba(255,255,255,0.12) !important;
+}
+
+.home .meter::after,
+.about .meter::after,
+.lateralBar,
+.projets .projCubes .cube {
+    background-color: rgba(255,255,255,0.16) !important;
+}
+
+.projets .headStatic h2,
+.projets .infos,
+.projets .counter,
+.stepNum,
+.selfPowered a {
+    color: #dbeafe !important;
+}
